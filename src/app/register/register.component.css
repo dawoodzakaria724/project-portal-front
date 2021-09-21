@@ -1,0 +1,58 @@
+.div1 mat-card {
+  padding: 60px;
+  min-width: 200px;
+}
+
+.sign-in-form {
+  padding: 10px;
+}
+
+.title-line-1 {
+  font-family: serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #5c5c5c;
+}
+
+.title-line-2 {
+  font-family: serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #a7a7a7;
+}
+
+.button-style {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: serif;
+  background-color: #ff6633;
+  color: white;
+  min-width: 100px;
+}
+
+.link-style {
+  text-decoration: none;
+  color: #41aae2;
+  margin-bottom: 20px;
+}
+
+.pass {
+  color: rgb(158, 18, 18);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.mobile-resize {
+  min-width: 100px;
+}

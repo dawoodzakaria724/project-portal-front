@@ -1,0 +1,54 @@
+<div fxLayoutAlign = "center center" fxFlexFill class = "div1">
+    <mat-card fxFlex = "28">
+        <div fxLayoutAlign = "center center" class = "title-line-1">Sign In</div>
+        <div fxLayoutAlign = "center center" class = "title-line-2">Portal</div>
+
+        <form 
+            [formGroup]= "loginForm" 
+            fxLayoutAlign = "stretch" 
+            fxLayout = "column" 
+            class = "sign-in-form"
+        >
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input formControlName = "email" matInput placeholder = "Email">
+            </mat-form-field>
+          
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input 
+                    formControlName = "password" 
+                    matInput type = "password" 
+                    placeholder = "Password"
+                >
+            </mat-form-field>
+
+            <p class = "pass" *ngIf = "invalidCred" href = "#">
+                Email and password don't match any user.
+            </p>
+
+            <button 
+                (click)="onClickLogin()" 
+                mat-stroked-button 
+                type = "Sign in" 
+                class = "button-style"
+            >
+                Sign in
+            </button>
+        </form>
+
+        <div fxLayoutAlign = "center">
+            <a href="" class = "link-style">I forgot my password</a>
+        </div>
+
+        <div fxLayoutAlign = "center">
+            <a 
+                class = "link-style"
+                [routerLink]="['/register']" 
+                routeLinkActive="router-link-active" 
+            >
+                Register
+            </a>
+        </div>
+    </mat-card>
+</div>

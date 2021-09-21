@@ -1,0 +1,263 @@
+<div class="background">
+    <div>
+        <img class = "logo" src="assets/imgs/logo-horiz.png" alt="logo">
+        <p class = "logo-sub">Member portal</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item1">
+            <mat-card>
+                <mat-card-title class="card-title">
+                    Members
+                </mat-card-title>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <mat-list>
+                        <mat-list-item style="padding-bottom: 10px;">
+                            <div>
+                                <img 
+                                    class = "member-img" 
+                                    src="assets/imgs/edward-kaufman.jpg"/>
+                            </div>
+                            <div>
+                                <p class = "member-name">Edward Kaufman</p>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item style="padding-bottom: 10px;">
+                            <div>
+                                <img 
+                                    class = "member-img" 
+                                    src="assets/imgs/robert-benavidez.jpg"/>
+                            </div>
+                            <div>
+                                <p class = "member-name">Robert Benavidez</p>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item style="padding-bottom: 10px;">
+                            <div>
+                                <img 
+                                    class = "member-img" 
+                                    src="assets/imgs/natalie-guandique.jpg"/>
+                            </div>
+                            <div>
+                                <p class="member-name">Natalie Guandique</p>
+                            </div>
+                        </mat-list-item>
+                        <mat-list-item style="padding-bottom: 10px;">
+                            <div>
+                                <img 
+                                    class = "member-img" 
+                                    src="assets/imgs/catherine-marroquin.jpg"/>
+                            </div>
+                            <div>
+                                <p class="member-name">Catherine Marroquin</p>
+                            </div>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a 
+                    class="card-footer-link" 
+                    href="" mat-flat-button>
+                    View all board members
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+        <div class="grid-item2">
+            <form class="search-form">
+                <mat-form-field class="search" appearance="fill">
+                    <mat-label>Search</mat-label>
+                    <button class = "search-button" matSuffix>
+                        <mat-icon>search</mat-icon>
+                    </button>
+                    <input 
+                        matInput #message type="search" 
+                        placeholder="Search for meetings, members, or events">
+                </mat-form-field>
+            </form>
+        </div>
+        
+        <div class="grid-item3">
+            <mat-card>
+                <mat-card-title class="card-title">Latest News</mat-card-title> 
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <mat-grid-list cols="1" rowHeight="2.1:1">
+                        <mat-grid-tile class="my-grid-tile">
+                            <div>
+                                <img 
+                                    class = "news-img" 
+                                    src="assets/imgs/mi-pasaje.jpg"/>
+                                
+                                <p class="news-img-title">Mi Pasaje</p>
+                                <p class="news-img-text">
+                                    Mi Pasaje means my path. Each year, 
+                                    Mission Graduates celebrates the journey into 
+                                    and out of college
+                                </p>
+                            </div>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="my-grid-tile">
+                            <div>
+                                <img 
+                                    class = "news-img" 
+                                    src="assets/imgs/march-to-college.jpg"/>
+                                <p class="news-img-title">March to College</p>
+                                <p class="news-img-text">
+                                    Join us as we march through the Mission, 
+                                    publicly and proudly declaring our collective 
+                                    commitment to college.
+                                </p>
+                            </div>     
+                        </mat-grid-tile>
+
+                        <mat-grid-tile class="my-grid-tile">
+                            <div>
+                                <img 
+                                    class = "news-img" 
+                                    src="assets/imgs/food-for-thought.jpg"/>
+                                
+                                <p class= news-img-title>Food for Thought</p>
+                                <p class="news-img-text">
+                                    Every October we host a Mission 
+                                    District-wide fundraiser, partnering 
+                                    with some of the best restaurants 
+                                    the city has to offer.
+                                </p>
+                            </div>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-grid-tile">
+                            <div>
+                                <img 
+                                    class = "news-img" 
+                                    src="assets/imgs/dr-seuss-day.jpg"/>
+                                
+                                <p class="news-img-title">Dr. Seuss Day</p>
+                                <p class="news-img-text">
+                                    Celebrates our shared love of 
+                                    Dr. Seuss classics through family 
+                                    reading events across our 
+                                    Extended Day Programs.
+                                </p>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a 
+                        class="card-footer-link" 
+                        href="" 
+                        mat-flat-button>
+                    
+                        View all events
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+        <div class="grid-item4">
+            <mat-card>
+                <mat-card-title class="card-title">Committees</mat-card-title>
+                <mat-divider></mat-divider> 
+                <mat-card-content>this will be the content</mat-card-content>
+                <mat-card-actions>this will be the action</mat-card-actions>
+            </mat-card>
+        </div>
+
+        <div class="grid-item5">
+            <mat-card>
+                <mat-card-title 
+                    class="card-title">Upcoming Board Meetings</mat-card-title> 
+                <mat-divider></mat-divider>
+                <mat-grid-list cols="3" gutterSize="10px">
+                    <mat-grid-tile>
+                        <mat-card class="upcoming-card">
+                            <p class="upcoming-num">09</p>
+                            <p class="upcoming-date">October</p>
+                            <p class="upcoming-meeting">Masterclass with J. <br> Lemkin</p>
+                            <p 
+                                href="" 
+                                mat-flat-button 
+                                class="upcoming-card-footer-link">
+                                2:30pm - 4:00pm <br> @ Zoom meeting
+                            </p>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-card class="upcoming-card">
+                            <p class="upcoming-num">17</p>
+                            <p class="upcoming-date">October</p>
+                            <p class="upcoming-meeting">Monthly checkpoint</p>
+                            <p 
+                                href="" 
+                                mat-flat-button 
+                                class="upcoming-card-footer-link">
+                            
+                                10:00am - 11:00am <br> @ Zoom meeting
+                            </p>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-card class="upcoming-card">
+                            <p class="upcoming-num">21</p>
+                            <p class="upcoming-date">October</p>
+                            <p class="upcoming-meeting">Extended Day <br> Initiatives</p>
+                            <p 
+                                href="" 
+                                mat-flat-button 
+                                class="upcoming-card-footer-link">
+                            
+                                3:45pm - 5:00pm <br> @ Zoom meeting
+                            </p>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-card class="upcoming-card">
+                            <p class="upcoming-num">02</p>
+                            <p class="upcoming-date">November</p>
+                            <p class="upcoming-meeting">College Connect <br> Annual Planning</p>
+                            <p 
+                                href="" 
+                                mat-flat-button 
+                                class="upcoming-card-footer-link">
+                            
+                                12:30pm - 1:30pm <br> @ Zoom meeting
+                            </p>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-card class="upcoming-card">
+                            <p class="upcoming-num">11</p>
+                            <p class="upcoming-date">November</p>
+                            <p class="upcoming-meeting">Masterclass J. Lemkin</p>
+                            <p 
+                                href="" 
+                                mat-flat-button 
+                                class="upcoming-card-footer-link">
+
+                                2:30pm - 4:00pm <br> @ Zoom meeting
+                            </p>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-card class="upcoming-card">
+                            <p class="upcoming-num">13</p>
+                            <p class="upcoming-date">November</p>
+                            <p class="upcoming-meeting">Monthly checkpoint</p>
+                            <p 
+                                href="" 
+                                mat-flat-button 
+                                class="upcoming-card-footer-link">
+                            
+                                10:00am - 11:00am <br> @ Zoom meeting
+                            </p>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-card>
+        </div>
+    </div>
+</div>

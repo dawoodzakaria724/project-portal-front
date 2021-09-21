@@ -1,0 +1,65 @@
+<div fxLayoutAlign = "center" class = "title-line-1">Meetings</div>
+<div class = "card">
+    <mat-card>
+        <div fxLayoutAlign = "center" class = "title-line-2">Upcoming Meetings</div>
+        <mat-divider></mat-divider>
+        <div class = "newMeetingDiv">
+                <button 
+                    type="Meeting" 
+                    (click)="onNewMeeting()" 
+                    mat-stroked-button 
+                    class="newMeeting"
+                >
+                    + New Meeting
+                </button>
+        </div>
+          <div class="item">
+              <table mat-table [dataSource] = "meetings">
+
+                  <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+                
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> Meeting Topic </th>
+                    <td mat-cell *matCellDef="let element"> {{element.meeting.topic}} </td>
+                  </ng-container>
+                
+                  <!-- Date Column -->
+                  <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef> Meeting Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.meeting.start_time.substring(0,10)}} </td>
+                  </ng-container>
+                
+                  <!-- Attendees Column -->
+                  <ng-container matColumnDef="attendees">
+                    <th mat-header-cell *matHeaderCellDef> Attendees </th>
+                    <td mat-cell *matCellDef="let element"> {{displayAttendees(element.attendees)}} </td>
+                  </ng-container>
+
+                  <!-- More Icon -->
+                  <ng-container matColumnDef="icon">
+                    <th mat-header-cell *matHeaderCellDef></th>
+                    <td mat-cell *matCellDef="let element" class="icon">
+                      <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon>more_vert</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item [cdkCopyToClipboard]="element.meeting.join_url">
+                          Copy Invitation
+                        </button>
+                        <button mat-menu-item style="color:#EA2727" 
+                        (click)="onDeleteMeeting(element.meeting.id)">
+                          Cancel Invitation
+                        </button>
+                      </mat-menu>
+                    </td>
+                  </ng-container>
+                
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                
+          </div>
+    </mat-card>
+</div>

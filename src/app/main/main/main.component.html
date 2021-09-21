@@ -1,0 +1,81 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class = "side-nav" mode="side" opened>
+      <img class = "logo" src="assets/imgs/logo.png" alt="logo">
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>
+            <button>
+              <mat-icon 
+                aria-hidden="false" 
+                aria-label="Example home icon"
+              >
+                search
+              </mat-icon>
+            </button>
+            Search...
+          </mat-label>
+          <input 
+            type = "search" 
+            matInput 
+            #message 
+            maxlength="256" 
+            placeholder="Ex. Documents"
+          >
+        </mat-form-field>  
+      </form>
+
+      <mat-nav-list>
+        <a 
+          mat-list-item href="#" 
+          [routerLink]="['/main/boards']" 
+          routeLinkActive="router-link-active"
+        > 
+          Boards 
+        </a>
+        <a 
+          mat-list-item href="#" 
+          [routerLink]="['/main/committees']" 
+          routeLinkActive="router-link-active"
+        > 
+          Committees 
+        </a>
+        <a 
+          mat-list-item href="#" 
+          [routerLink]="['/main/meetings']" 
+          routeLinkActive="router-link-active"
+        > 
+          Meetings 
+        </a>
+        <a 
+          mat-list-item href="#" 
+          [routerLink]="['/main/documents']" 
+          routeLinkActive="router-link-active"
+        > 
+          Documents 
+        </a>
+        <a 
+          mat-list-item href="#" 
+          [routerLink]="['/main/members']" 
+          routeLinkActive="router-link-active"
+        > 
+          Members 
+        </a>
+      </mat-nav-list>
+      <mat-nav-list>
+        <a 
+          mat-list-item href="#" 
+          class = "sign-out" 
+          [routerLink]="['/login']" 
+          routeLinkActive="router-link-active"
+        >
+          Sign Out
+        </a>
+      </mat-nav-list> 
+    </mat-drawer>
+
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+
+</mat-drawer-container>

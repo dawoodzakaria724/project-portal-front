@@ -1,0 +1,73 @@
+<div fxLayoutAlign = "center center" fxFlexFill class = "div1">
+    <mat-card style="max-width: 1000px; min-height: 280px;" fxFlex = "28">
+        <div fxLayoutAlign = "center center" class = "title-line-1">Register</div>
+
+        <form 
+            [formGroup]= "registerForm" 
+            fxLayoutAlign = "stretch" 
+            fxLayout = "column" 
+            class = "sign-in-form">
+            <mat-form-field class="mobile-resize">
+                <mat-label>Email</mat-label>
+                <input 
+                    matInput 
+                    [formControl]="emailFormControl" 
+                    [errorStateMatcher]="matcher" 
+                    formControlName = "email" 
+                    placeholder = "Ex. pat@example.com">
+                <mat-error 
+                    *ngIf="emailFormControl.hasError('email') 
+                        && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>            
+            </mat-form-field>
+          
+            <mat-form-field class="mobile-resize">
+                <input 
+                    formControlName = "pass" 
+                    matInput name= "password" 
+                    type = "password" 
+                    placeholder = "Password">
+            </mat-form-field>
+
+            <mat-form-field class="mobile-resize">
+                <input 
+                    formControlName = "pass2" 
+                    matInput 
+                    type = "retype password" 
+                    placeholder = "Retype Password">
+            </mat-form-field>
+
+            <p class = "pass" *ngIf = "showMatchPass" href = "#">
+                The passwords don't match
+                </p>
+
+            <a
+                class = "pass"
+                *ngIf="showLengthPass"
+                href="#">The password must be at least 8 characters long
+            </a>
+
+            <button 
+                (click)="onClickRegister()" 
+                [disabled]="showLengthPass || showMatchPass" 
+                mat-stroked-button type = "register" 
+                class = "button-style">
+                Register
+            </button>
+
+        </form>
+        <div fxLayoutAlign = "center">
+            <a href="" class = "link-style">I forgot my password</a>
+        </div>
+
+        <div fxLayoutAlign = "center">
+            <a class = "link-style" 
+            [routerLink]="['/login']" routeLinkActive="router-link-active">Login</a>
+        </div>
+    
+    </mat-card>
+</div>

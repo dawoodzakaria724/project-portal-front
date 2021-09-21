@@ -1,0 +1,45 @@
+<div fxLayoutAlign = "center" class = "title-line-1">Documents</div>
+<div class = "card">
+    <mat-card>
+        <div fxLayoutAlign = "center" class = "title-line-2">List of Documents</div>
+        <mat-divider></mat-divider>
+        <div class = "upload-div">
+            <input  
+                class = "input" 
+                type="file" 
+                (change)="onFileSelected($event)"
+                #event
+            >
+                <button 
+                    type="button" 
+                    (click)="onUpload()" 
+                    mat-stroked-button 
+                    class="upload"
+                >
+                    Upload
+                </button>
+        </div>
+
+        <mat-list>
+            <mat-list-item *ngFor="let image of images">
+                    <div class="item">
+                        <div class="item-flex">
+                            <img 
+                                (click)="openPic(image.name)" 
+                                class = "center" 
+                                [src]="image.image"
+                            />
+                            <p>{{image.name.split('/')[1]}}</p>
+                        </div>
+                        <fa-icon 
+                            (click)="onDelete(image.name)" 
+                            class = "center" 
+                            [icon]="faTrash"
+                        >
+                        </fa-icon>
+                    </div>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>

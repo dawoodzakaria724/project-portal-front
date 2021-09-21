@@ -1,0 +1,171 @@
+/* title and background */
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  width: 500px;
+}
+
+.background {
+  background-color: #d5d5d5;
+  height: 300px;
+}
+
+.logo-sub {
+  color: #5c5c5c;
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 500px;
+}
+
+/* body */
+
+.card {
+  min-height: 200px;
+}
+
+.card-title {
+  color: #5c5c5c;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.card-footer-link {
+  color: #41aae2;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'members search search search search latest-news'
+    'members upcoming upcoming upcoming upcoming latest-news'
+    'committees upcoming upcoming upcoming upcoming latest-news';
+  grid-gap: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* members card */
+
+.grid-item1 {
+  grid-area: members;
+  height: 500px;
+}
+
+.member-img {
+  border-radius: 25px;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.member-name {
+  color: #5c5c5c;
+  font-size: 14px;
+}
+
+/* search input */
+
+.grid-item2 {
+  grid-area: search;
+  height: fit-content;
+}
+
+.search {
+  background-color: white;
+  height: 40px;
+  width: 100%;
+}
+
+.search-form {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+.search-button {
+  cursor: pointer;
+}
+
+/* latest news card */
+
+.grid-item3 {
+  grid-area: latest-news;
+}
+
+.news-img {
+  float: left;
+  height: 100px;
+  margin: 10px;
+  width: 120px;
+}
+
+.news-img-title {
+  font-size: 12px;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.news-img-text {
+  font-size: 10px;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.my-grid-tile {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/* committees card */
+
+.grid-item4 {
+  grid-area: committees;
+  height: fit-content;
+}
+
+/* upcoming board meetings card */
+
+.grid-item5 {
+  grid-area: upcoming;
+  height: fit-content;
+}
+
+.upcoming-card {
+  height: fit-content;
+  min-width: 180px;
+  min-height: 180px;
+  width: fit-content;
+}
+
+.upcoming-card-footer-link {
+  color: #41aae2;
+  font-size: 12px;
+}
+
+.upcoming-num {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.upcoming-date {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.upcoming-meeting {
+  font-size: 16px;
+  margin-top: 25px;
+}
